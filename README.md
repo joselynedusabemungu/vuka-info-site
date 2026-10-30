@@ -1,4 +1,4 @@
-# VUKA — Informational Website
+# VUKA Informational Website
 
 The marketing and informational site for **VUKA** — a platform that turns everyday social media scrolling into structured, verifiable learning pathways and real-world opportunities for Kenyan high school graduates.
 
