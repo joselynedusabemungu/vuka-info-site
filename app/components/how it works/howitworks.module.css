@@ -1,0 +1,99 @@
+.wholePage {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 80px 24px;
+  font-family: Inter, sans-serif;
+  padding-bottom: 20px; 
+}
+
+.header {
+  text-align: center;
+  margin-bottom: 64px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.span {
+  display: block;
+  color: #072540; 
+  font-size: 4.2rem; 
+  font-weight: 800;
+  letter-spacing: -0.03em;
+  line-height: 1.1;
+  margin-bottom: 12px;
+  text-align: center;
+}
+
+.heading {
+  color: #072540;
+  font-size: 1.7rem;
+  max-width: 720px;
+  text-align: center;
+  line-height: 1.4;
+  margin: 0;
+}
+
+.stepsContainer {
+  display: flex;
+  flex-wrap: wrap; 
+  justify-content: center; 
+  gap: 32px; 
+  width: 100%;
+}
+
+.stepsCard {
+  background-color: #072540; 
+  border-radius: 16px;
+  padding: 44px 36px; 
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  color: white;
+  width: 100%;
+  flex: 1 1 380px; 
+  max-width: 390px; 
+  height: 340px;
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+  border-left: 8px solid #009450; 
+  gap: 12px;
+  box-sizing: border-box;
+}
+
+.stepsCard:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 16px 32px rgba(7, 37, 64, 0.15); 
+  border: 2px solid white;
+}
+
+.stepNumber {
+  font-size: 1.4rem;
+  font-weight: 600;
+  color: #009450; 
+  margin: 0;
+  line-height: 1;
+}
+
+.stepTitle {
+  color: white;
+  font-size: 1.6rem;
+  font-weight: 700;
+  line-height: 1.25;
+  margin: 0;
+}
+
+.stepDescription {
+  color: rgba(255, 255, 255, 0.85); 
+  font-size: 15px; 
+  line-height: 1.5;
+  text-align: left;
+  margin: 0;
+}
+
+@media (max-width: 968px) {
+  .stepsCard {
+    max-width: 100%;
+    flex: 1 1 100%;
+    height: auto; 
+  }
+}

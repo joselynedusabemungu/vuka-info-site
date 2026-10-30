@@ -1,0 +1,375 @@
+body {
+  background-color: #ffffff;
+}
+
+.body {
+  background-color: #ffffff;
+  font-family: "Montserrat", sans-serif;
+  min-height: 100vh;
+  margin: 0;
+  padding: 0 16px 100px 16px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  overflow-x: hidden;
+  box-sizing: border-box;
+}
+
+.page-separator-line {
+  width: 100%;
+  max-width: 1300px;
+  height: 2px;
+  margin: 0 auto 40px auto;
+  background: linear-gradient(
+    to right,
+    transparent 0%,
+    rgba(0, 148, 80, 0.3) 25%,
+    #009450 50%,
+    rgba(0, 148, 80, 0.3) 75%,
+    transparent 100%
+  );
+  box-shadow: 0 4px 24px rgba(0, 148, 80, 0.25);
+  border-radius: 9999px;
+  opacity: 0.8;
+}
+
+.grid-background-overlay {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  z-index: 1;
+  background-image:
+    linear-gradient(rgba(7, 37, 64, 0.012) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(7, 37, 64, 0.012) 1px, transparent 1px);
+  background-size: 50px 50px;
+}
+
+.about {
+  max-width: 950px;
+  margin: 0 auto 64px auto;
+  text-align: center;
+  position: relative;
+  z-index: 2;
+  width: 100%;
+}
+
+.about h1 {
+  color: #072540;
+  font-size: clamp(2.8rem, 5vw, 4.2rem);
+  margin: 0 0 16px 0;
+  font-weight: 800;
+  letter-spacing: -0.03em;
+  line-height: 1.1;
+}
+
+.subtitle {
+  color: #072540;
+  font-size: 1.25rem;
+  line-height: 1.6;
+  opacity: 0.85;
+  font-weight: 400;
+  max-width: 820px;
+  margin: 0 auto;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  width: 100%;
+  max-width: 1300px;
+  position: relative;
+  z-index: 2;
+}
+
+.row {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  gap: 80px;
+  width: 100%;
+}
+
+.mission {
+  background-color: #072540;
+  padding: 56px 48px;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  flex: 1.1;
+  border-radius: 24px;
+  max-width: 620px;
+  width: 100%;
+  box-shadow: 0 20px 45px rgba(7, 37, 64, 0.15);
+  border-left: 8px solid #009450;
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  box-sizing: border-box;
+}
+
+.mission:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 25px 50px rgba(7, 37, 64, 0.2);
+}
+
+.mission h2 {
+  color: #ffffff;
+  font-size: 2.2rem;
+  font-weight: 700;
+  margin: 0 0 20px 0;
+}
+
+.mission p {
+  color: rgba(255, 255, 255, 0.85);
+  font-size: 1.05rem;
+  line-height: 1.7;
+  text-align: left;
+  margin: 0 0 16px 0;
+}
+
+.mission p:last-child {
+  margin-bottom: 5;
+}
+
+.image-box {
+  flex: 0.9;
+  display: flex;
+  justify-content: center;
+  max-width: 400px;
+  width: 100%;
+}
+
+.frame-box {
+  position: relative;
+  padding: 16px;
+  box-sizing: border-box;
+}
+
+.image-wrapper {
+  width: 100%;
+  height: auto;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.08);
+}
+
+.image-box img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
+.corner-anchor {
+  position: absolute;
+  width: 1rem;
+  height: 1rem;
+  border-color: rgba(7, 37, 64, 0.2);
+  border-style: solid;
+  border-width: 0;
+  pointer-events: none;
+  transition: all 0.3s ease;
+}
+
+.top-left {
+  top: 0;
+  left: 0;
+  border-top-width: 2px;
+  border-left-width: 2px;
+}
+
+.top-right {
+  top: 0;
+  right: 0;
+  border-top-width: 2px;
+  border-right-width: 2px;
+}
+
+.bottom-left {
+  bottom: 0;
+  left: 0;
+  border-bottom-width: 2px;
+  border-left-width: 2px;
+}
+
+.bottom-right {
+  bottom: 0;
+  right: 0;
+  border-bottom-width: 2px;
+  border-right-width: 2px;
+}
+
+.frame-box:hover .corner-anchor {
+  border-color: #009450;
+}
+
+.founders {
+  margin-top: 60px;
+  text-align: center;
+  width: 100%;
+  padding: 80px 0 0 0;
+  border-top: 1px solid rgba(7, 37, 64, 0.08);
+}
+
+.founders h2 {
+  font-size: 1.1rem;
+  font-weight: 700;
+  letter-spacing: 0.15em;
+  color: #009450;
+  margin-bottom: 56px;
+}
+
+.founders-grid {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  max-width: 1100px;
+  margin: 0 auto;
+  gap: 30px;
+}
+
+.founder-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  flex: 1;
+}
+
+.grid-connector {
+  width: 1px;
+  height: 140px;
+  background: linear-gradient(
+    to bottom,
+    transparent,
+    rgba(7, 37, 64, 0.08),
+    transparent
+  );
+  align-self: center;
+  flex-shrink: 0;
+}
+
+.avatar-wrapper {
+  width: 300px;
+  height: 300px;
+  border-radius: 50%;
+  overflow: hidden;
+  margin-bottom: 20px;
+  border: 3px solid #072540;
+  outline: 2px solid #009450;
+  outline-offset: 4px;
+  box-shadow: 0 10px 25px rgba(7, 37, 64, 0.12);
+  background-color: #f8fafc;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: transform 0.25s ease, outline-offset 0.25s ease;
+}
+
+.founder-card:hover .avatar-wrapper {
+  transform: scale(1.04);
+  outline-offset: 6px;
+}
+
+.avatar-wrapper img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.founder-card h3 {
+  color: #072540;
+  font-size: 1.15rem;
+  font-weight: 700;
+  margin: 0 0 4px 0;
+  line-height: 1.3;
+}
+
+.founder-title {
+  color: #64748b;
+  font-size: 0.9rem;
+  font-weight: 500;
+  margin: 0;
+}
+
+@media (max-width: 1024px) {
+  .container {
+    gap: 96px;
+  }
+
+  .row {
+    gap: 48px;
+  }
+}
+
+@media (max-width: 968px) {
+  .body {
+    padding: 0 12px 60px 12px;
+  }
+
+  .page-separator-line {
+    max-width: 90%;
+    margin-bottom: 32px;
+  }
+
+  .about h1 {
+    font-size: 2.8rem;
+  }
+
+  .container {
+    gap: 64px;
+  }
+
+  .row {
+    flex-direction: column !important;
+    gap: 40px;
+  }
+
+  .row:nth-of-type(2) {
+    flex-direction: column-reverse !important;
+  }
+
+  .mission {
+    max-width: 100% !important;
+    padding: 36px 24px;
+    transform: none !important;
+  }
+
+  .image-box {
+    max-width: 100% !important;
+    width: 100%;
+  }
+
+  .frame-box {
+    padding: 0;
+  }
+
+  .corner-anchor {
+    display: none;
+  }
+
+  .founders-grid {
+    display: grid !important;
+    grid-template-columns: repeat(2, 1fr) !important;
+    gap: 48px 16px;
+  }
+
+  .grid-connector {
+    display: none !important;
+  }
+}
+
+@media (max-width: 480px) {
+  .about h1 {
+    font-size: 2.2rem;
+  }
+
+  .founders-grid {
+    grid-template-columns: 1fr !important;
+    gap: 32px;
+  }
+
+  .avatar-wrapper {
+    width: 120px;
+    height: 120px;
+  }
+}
