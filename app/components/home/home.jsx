@@ -2,12 +2,10 @@
 
 import { useEffect, useRef, useState } from "react";
 import Image from "next/image";
-import Link from "next/link";
 import {
   Flame,
   GraduationCap,
   BadgeCheck,
-  ArrowRight,
   ChevronDown,
 } from "lucide-react";
 import styles from "./home.module.css";
@@ -48,7 +46,9 @@ export default function Home() {
 
   return (
     <div className={styles.heroContainer}>
-      <header className={`${styles.heroHeader} ${scrolled ? styles.scrolled : ""}`}>
+      <header
+        className={`${styles.heroHeader} ${scrolled ? styles.scrolled : ""}`}
+      >
         <div className={styles.headerInner}>
           <a href="#home" className={styles.logoGroup} aria-label="Vuka home">
             <div className={styles.logoWrapper}>
@@ -130,9 +130,12 @@ export default function Home() {
               className={`${styles.btnWrapper} ${styles.enter}`}
               style={{ "--d": "600ms" }}
             >
-              <Link href="/login" className={styles.ctaButton}>
-                Get started <ArrowRight size={18} />
-              </Link>
+              <a
+                href="https://vuka-dashboard-8w9h.vercel.app"
+                className={styles.ctaButton}
+              >
+                Get started
+              </a>
               <a href="#services" className={styles.ghostButton}>
                 See how it works
               </a>
